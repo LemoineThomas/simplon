@@ -1,39 +1,22 @@
 <?php
 
 
-    function verificationLogin($login,$mdp,$users){
-        $login = strip_tags($login);
-        $mdp = strip_tags($mdp);
-        $trouve = false;
-        $pos = 0;
-        
-        do{
-            if ($login == $users[$pos][1] && $mdp == $users[$pos][2] ) {
+    function getUser($email, $password, $connexion){
+        $email = strip_tags($email);
+        $password = strip_tags($password);
 
-                $trouve = true;
-                $_SESSION["connecté"] = 'connecté';
-                $_SESSION["id"] = $users[$pos][0];
-                if($users[$pos][3] == "admin"){
-                    $_SESSION["role"] = 'admin';
-                }elseif($users[$pos][3] == "membre"){
-                    $_SESSION["role"] = 'membre';
-                }else{
-                    $_SESSION["role"] = '';
-                }
+        $requete = $connexion->prepare("
+        SELECT email_utilisateurs, nom_utilisateurs, prenom_utilisateurs, id_roles FROM utilisateurs WHERE email_utilisateurs = :email AND password_utilisateurs = :password");
 
-            }
+        $requete->bindParam(':email', $email);
+        $requete->bindParam(':password', $password);
 
-            $pos = $pos + 1;
+        $requete->execute();
 
-        }while ($pos < count($users) && !$trouve);
+        $resultat = $requete->fetchall();
 
-        if ($trouve) {			
-            header('Location: index.php');
-            exit();
-        }else{
-            header('Location: index.php?retour=KO');
-            exit();
-        }
+
+        return $resultat;
     }
 
 

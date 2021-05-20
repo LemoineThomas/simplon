@@ -34,6 +34,7 @@
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="page-wrapper">
@@ -56,21 +57,32 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="index.php?utilisateurs=accueil">Utilisateur</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?attributions=accueil">Attribution</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?ordinateurs=accueil">Ordinateur</a>
-                                </li>
-                            </ul>
-                        </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="index.php">
+                          <i class="fas fa-fw fa-tachometer-alt"></i>
+                          <span>Dashboard</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?clients=accueil">
+                          <i class="fas fa-fw fa-users"></i>
+                          <span>Clients</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?promos=accueil">
+                          <i class="fas fa-fw fa-table"></i>
+                          <span>Promotions</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?categories=accueil">
+                          <i class="fas fa-fw fa-archive"></i>
+                          <span>Catégories</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="fas fa-fw fa-area-chart"></i>
+                          <span>Reporting</span></a>
+                      </li>
                         
                     </ul>
                 </div>
@@ -88,22 +100,32 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="index.php?utilisateurs=accueil">Utilisateur</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?attributions=accueil">Attribution</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?ordinateurs=accueil">Ordinateur</a>
-                                </li>
-                            </ul>
-                        </li>
-                        
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.php">
+                          <i class="fas fa-fw fa-tachometer-alt"></i>
+                          <span>Dashboard</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?clients=accueil">
+                          <i class="fas fa-fw fa-users"></i>
+                          <span>Clients</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?promos=accueil">
+                          <i class="fas fa-fw fa-table"></i>
+                          <span>Promotions</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php?categories=accueil">
+                          <i class="fas fa-fw fa-archive"></i>
+                          <span>Catégories</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="fas fa-fw fa-area-chart"></i>
+                          <span>Reporting</span></a>
+                      </li>
                     </ul>
                 </nav>
             </div>
@@ -124,23 +146,23 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="images/icon/avatar-01.jpg" alt="avatar" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Secrétaire</a>
+                                            <a class="js-acc-btn" href="#"><?php echo $_SESSION["prenom"] ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="Secretaire" />
+                                                        <img src="images/icon/avatar-01.jpg" alt="avatar" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">secretaire</a>
+                                                        <a href="#"><?php echo $_SESSION["prenom"] . " " . $_SESSION["nom"] ?></a>
                                                     </h5>
-                                                    <span class="email">secretaire@simplon.com</span>
+                                                    <span class="email"><?php echo $_SESSION["email"] ?></span>
                                                 </div>
                                             </div>
                                             

@@ -31,6 +31,7 @@
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 

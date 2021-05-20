@@ -23,9 +23,9 @@
                                     <div class="card-body-icon">
                                     <i class="fa fa-user"></i>
                                     </div>
-                                    <div class="mr-5">Utilisateur</div>
+                                    <div class="mr-5">Clients</div>
                                 </div>
-                                <a class="card-footer text-white clearfix small z-1" href="index.php?utilisateurs=accueil">
+                                <a class="card-footer text-white clearfix small z-1" href="index.php?clients=accueil">
                                     <span class="float-left">Accéder</span>
                                     <span class="float-right">
                                     <i class="fas fa-angle-right"></i>
@@ -39,9 +39,9 @@
                                     <div class="card-body-icon">
                                     <i class="fas fa-fw fa-plus"></i>
                                     </div>
-                                    <div class="mr-5">Attribution</div>
+                                    <div class="mr-5">Promos</div>
                                 </div>
-                                <a class="card-footer text-white clearfix small z-1" href="index.php?attributions=accueil">
+                                <a class="card-footer text-white clearfix small z-1" href="index.php?promos=accueil">
                                     <span class="float-left">Accéder</span>
                                     <span class="float-right">
                                     <i class="fas fa-angle-right"></i>
@@ -55,9 +55,9 @@
                                     <div class="card-body-icon">
                                     <i class="fa fa-desktop"></i>
                                     </div>
-                                    <div class="mr-5">Ordinateur</div>
+                                    <div class="mr-5">Catégories</div>
                                 </div>
-                                <a class="card-footer text-white clearfix small z-1" href="index.php?ordinateurs=accueil">
+                                <a class="card-footer text-white clearfix small z-1" href="index.php?categories=accueil">
                                     <span class="float-left">Accéder</span>
                                     <span class="float-right">
                                     <i class="fas fa-angle-right"></i>

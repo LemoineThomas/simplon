@@ -6,7 +6,7 @@
 		$pass = "";
 
 		try{
-			$connexion = new PDO("mysql:host=$serveur;dbname=simplon", $login, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+			$connexion = new PDO("mysql:host=$serveur;dbname=promo", $login, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 			$connexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
 		}
@@ -18,22 +18,10 @@
 		return $connexion;
 	}
 
-    function getUsers($connexion){
+
+	function getCategories($connexion){
         $requete = $connexion->prepare("
-        SELECT * FROM users");
-
-        $requete->execute();
-
-        $resultat = $requete->fetchall();
-
-
-        return $resultat;
-    }
-
-	
-	function getOrdinateurs($connexion){
-        $requete = $connexion->prepare("
-        SELECT * FROM ordinateurs");
+        SELECT * FROM categories");
 
         $requete->execute();
 
@@ -45,7 +33,7 @@
 	
 	function getUtilisateurs($connexion){
         $requete = $connexion->prepare("
-        SELECT * FROM utilisateurs");
+        SELECT * FROM clients");
 
         $requete->execute();
 

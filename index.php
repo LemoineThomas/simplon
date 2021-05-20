@@ -22,17 +22,15 @@
 			if ($_SESSION["connecté"] == 'connecté') {
 				//on check le role de l'utilisateur connecté pour l'envoyé vers le bon controller
 				if ($_SESSION["role"] == 'admin'){
-					if (isset($_GET['utilisateurs'])) {
-						$controller = "controller/admin/c_utilisateurs.php";
-					}elseif(isset($_GET['attributions'])){
-						$controller = "controller/admin/c_attributions.php";
-					}elseif(isset($_GET['ordinateurs'])){
-						$controller = "controller/admin/c_ordinateurs.php";
+					if (isset($_GET['clients'])) {
+						$controller = "controller/admin/c_clients.php";
+					}elseif(isset($_GET['promos'])){
+						$controller = "controller/admin/c_promos.php";
+					}elseif(isset($_GET['categories'])){
+						$controller = "controller/admin/c_categories.php";
 					}else{
 						$controller = "controller/admin/c_accueilAdmin.php";
 					}
-				}elseif($_SESSION["role"] == 'membre'){
-					$controller = "controller/membre/c_accueilMembre.php";
 				}else{
 					$controller = "controller/accueil/c_accueil.php";
 				}
